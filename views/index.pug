@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div.p-3
+      h2 Registrierung
+      form(action="registrierung")
+        div.w-100.p-3
+          input.form-control-lg(type="text", name="E-mail2", placeholder="E-mail")
+        div.w-100.p-3
+          input.form-control-lg(type="password", name="Passwort", placeholder="Passwort")
+        div.w-100.p-3
+          input.form-control-lg(type="text", name="Name", placeholder="Name")
+
+        div.w-100.p-3
+          input.btn-lg.btn-primary.btn(type="submit", value="Anmelden")

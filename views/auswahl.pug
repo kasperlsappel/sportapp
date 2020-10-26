@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  
+    div.p-4
+        div
+            h2 Auswahl der Prämie
+        each val in gutscheine
+            div.pb-3
+                div.pb-0.font-weight-bold=val.spiel
+                div.pb-0=val.headline
+                a(href="ausgewaehlt?gutschein="+val.spiel)
+                    img(src=val.img width="300px")

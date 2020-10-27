@@ -11,14 +11,22 @@ block content
                 - spiel = val
                 div.pb-3
                     div.pb-0.font-weight-bold=val.spiel
-                    div.pb-0=val.headline
                     a(href="ausgewaehlt?gutschein="+val.spiel)
-                        img(src=val.img width="300px")
-                ul
-                    li="Prämie: "+ val.praemie
-                    li="Ziel: " + val.std + " Stunden"
-                    li="Zeit insgesamt: "+val.laufzeit
-                    li="Maximale Stunden pro Tag: "+val.max
+                        img(src=val.img width="342px")
+                div.p-0                   
+                    ul.list-group
+                        li.list-group-item
+                            span.font-weight-bold="Prämie: "
+                            span=val.praemie
+                        li.list-group-item
+                            span.font-weight-bold="Ziel: " 
+                            span=val.std + " Stunden"
+                        li.list-group-item
+                            span.font-weight-bold="Zeit insgesamt: "
+                            span=val.laufzeit
+                        li.list-group-item
+                            span.font-weight-bold="Maximale Stunden pro Tag: "
+                            span=val.max
         div.w-100.pt-3
             if !req.query.action
                 form(action="/ausgewaehlt")
@@ -27,7 +35,7 @@ block content
                     input.btn-primary.btn.btn-lg(type="submit", value="Start")
             else if req.query.action == "start"
                 div.pb-1.font-weight-bold Aktueller Fortschritt
-                div.progress
+                div.progress(style="height:35px;")
                     div.progress-bar(role="progressbar" style="width: "+(3*100/spiel.std)+"%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")="3h/"+spiel.std+"h"
                 div
                     table.table
@@ -37,11 +45,17 @@ block content
                                 th Sport in Stunden
                         tbody
                             tr
-                                td 26.11.
-                                td 2 
+                                td 25.11.
+                                td 1,5
                             tr  
-                                td 27.11.
+                                td 26.11.
                                 td 1
+                            tr
+                                td 27.11.
+                                td 0.5
+                            tr  
+                                td 28.11.
+                                td 1,5
                     form(action="/ausgewaehlt")
                         input.d-none.form-control-lg(type="text", name="gutschein", value=req.query.gutschein)
                         input.d-none.form-control-lg(type="text", name="action", value="sync")
@@ -49,7 +63,7 @@ block content
 
             else if req.query.action == "sync"
                 div.pb-1.font-weight-bold Aktueller Fortschritt
-                div.progress
+                div.progress(style="height:35px;")
                     div.progress-bar(role="progressbar" style="width: "+(5*100/spiel.std)+"%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")="5h/"+spiel.std+"h"
 
                 div
@@ -60,14 +74,20 @@ block content
                                 th Sport in Stunden
                         tbody
                             tr
+                                td 25.11.
+                                td 1,5
+                            tr
                                 td 26.11.
-                                td 2 
-                            tr  
-                                td 27.11.
                                 td 1
                             tr  
+                                td 27.11.
+                                td 0,5
+                            tr  
                                 td 28.11.
-                                td 2
+                                td 1,5
+                            tr  
+                                td 29.11.
+                                td 0,5                                
                             
                 form(action="/ausgewaehlt")
                     input.d-none.form-control-lg(type="text", name="gutschein", value=req.query.gutschein)

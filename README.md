@@ -5,3 +5,6 @@ cf push sportzumzocken
 
 ## Url
 sportzumzocken.cfapps.eu10.hana.ondemand.com
+
+## QR Code generator
+http://goqr.me/

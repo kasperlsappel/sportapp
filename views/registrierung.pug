@@ -2,11 +2,34 @@ extends layout
 
 block content
     div.p-3
-        h2 Danke für das Anmelden
-        form(action="auswahl")
-            div.w-100.p-3
-                input.btn-primary.btn.btn-lg(type="submit", value="Los gehts!")
+        if !req.query.PLZ                
+            h2 Danke für das Anmelden
+            form(action="auswahl")
+                div.w-100.p-3
+                    input.btn-primary.btn.btn-lg(type="submit", value="Los gehts!")
 
+            div.p-3
+                h2 Noch keinen Tracker?
+                img(src="/images/Tracker1.jpg" width="300px")  
+                form(action="registrierung")
+                    div.w-100.p-3
+                        input.form-control-lg(type="text", name="Straße", placeholder="Straße" id="straße")
+                    div.w-100.p-3
+                        input.form-control-lg(type="text", name="PLZ", placeholder="PLZ" id="plz")
+                    div.w-100.p-3
+                        input.form-control-lg(type="text", name="Stadt", placeholder="Stadt" id="stadt")
+
+                    div.w-100.p-3
+                        input.btn-lg.btn-success.btn(type="submit", value="Bestellen")  
+
+        else
+            h2 Danke für das Anmelden 
+            p Ihr Tracker wird geliefert
+            img(src="/images/paket.gif" width="300px") 
+
+            form(action="auswahl")
+                div.w-100.p-3
+                    input.btn-primary.btn.btn-lg(type="submit", value="Los gehts!")
 
 
 

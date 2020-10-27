@@ -6,25 +6,38 @@ var gutscheine = [
     spiel : "Brawl Stars",
     headline : "170 Gems: 22 Stunden Sport (22 Tage)",
     img : "/images/BrawlStarsGems.jpg",
-    std : 22
+    std : 22,
+    praemie : "170 Gems",
+    laufzeit :"22 Tage",
+    max :"1h 30min",
   },
   {
     spiel : "Fall Guys",
     headline : "Herzogin Outfit (22.000 Kudos): 20 Stunden Sport (20 Tage)",
     img : "/images/FallGuys.jpeg",
-    std : 20
+    std : 20,
+    praemie : "Herzogin Outfit",
+    laufzeit :"20 Tage",
+    max :"1h 30min",
   },
   {
     spiel : "Fortnite",
-    headline : "Epischer Skin (1.500 V-Bucks): 30 Stunden Sport (30 Tage)",
+    headline : "Ikonik Skin (1.500 V-Bucks): 30 Stunden Sport (30 Tage)",
     img : "/images/ikonik_skin_fortnite.jpg",
-    std : 30
+    std : 30,
+    praemie : "Ikonik Skin",
+    laufzeit :"30 Tage",
+    max :"1h 30min",
+
   },
   {
     spiel : "Super Smash Bros Ultimate",
     headline : "Steve Kämpfer (6€): 12 Stunden Sport (12 Tage)",
     img : "/images/Steve-smash-bros.jpg",
-    std : 12
+    std : 12,
+    praemie : "Steve Kämpfer",
+    laufzeit :"12 Tage",
+    max :"1h 30min",
   },      
 ]
 
@@ -35,7 +48,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/registrierung', function(req, res, next) {
-  res.render('registrierung', { title: 'Sport zum Zocken' });
+  res.render('registrierung', { title: 'Sport zum Zocken', req : req });
 });
 
 router.get('/auswahl', function(req, res, next) {

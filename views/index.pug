@@ -5,6 +5,15 @@ block content
       h2 Registrierung
       form(action="registrierung", autocomplete="off")
         div.w-100.p-3
+          select#cars(name='Krankenkassen' class="custom-select custom-select-lg mb-3")
+              option(value='') Krankenkasse auswählen
+              option(value='') AOK Plus
+              option(value='') AOK Rheinland-Pfalz
+              option(value='') AOK Baden-Württemberg
+              option(value='') ...
+
+
+        div.w-100.p-3
           input.form-control-lg(type="text", name="E-mail2", placeholder="E-mail")
         div.w-100.p-3
           input.form-control-lg(type="password", name="Passwort", placeholder="Passwort")

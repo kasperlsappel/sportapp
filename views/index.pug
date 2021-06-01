@@ -4,13 +4,17 @@ block content
     div.p-3
       h2 Registrierung
       form(action="registrierung", autocomplete="off")
-        div.w-100.p-3
-          select#cars(name='Krankenkassen' class="custom-select custom-select-lg mb-3")
-              option(value='') Krankenkasse auswählen
-              option(value='') AOK Plus
-              option(value='') AOK Rheinland-Pfalz
-              option(value='') AOK Baden-Württemberg
-              option(value='') ...
+        .dropdown.p-3
+          button#dropdownMenuButton.btn-lg.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+            | Krankenkasse
+          .dropdown-menu(aria-labelledby='dropdownMenuButton')
+            div.dropdown-item.firstOption  
+              a AOK
+            div.dropdown-item.secondOption 
+              a DAK
+            div.dropdown-item.thirdOption 
+              a BKK
+
 
 
         div.w-100.p-3

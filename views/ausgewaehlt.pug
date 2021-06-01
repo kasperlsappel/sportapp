@@ -64,7 +64,7 @@ block content
             else if req.query.action == "sync"
                 div.pb-1.font-weight-bold Aktueller Fortschritt
                 div.progress(style="height:35px;")
-                    div.progress-bar(role="progressbar" style="width: "+(5*100/spiel.std)+"%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")="5h/"+spiel.std+"h"
+                    div.progress-bar(role="progressbar" style="width: "+(7*100/spiel.std)+"%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")="7h/"+spiel.std+"h"
 
                 div
                     table.table
@@ -87,7 +87,13 @@ block content
                                 td 1,5
                             tr  
                                 td 29.11.
-                                td 0,5                                
+                                td 0,5 
+                            tr  
+                                td 30.11.
+                                td 1
+                            tr  
+                                td 1.12.
+                                td 1                                                                                                
                             
                 form(action="/ausgewaehlt")
                     input.d-none.form-control-lg(type="text", name="gutschein", value=req.query.gutschein)

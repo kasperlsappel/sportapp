@@ -2,11 +2,11 @@ extends layout
 
 block content
     div.p-3
-      h2 Registrierung
+      h2 Registration
       form(action="registrierung", autocomplete="off")
         .dropdown.p-3
           button#dropdownMenuButton.btn-lg.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
-            | Krankenkasse
+            | Health Insurance
           .dropdown-menu(aria-labelledby='dropdownMenuButton')
             div.dropdown-item.firstOption  
               a AOK
@@ -20,9 +20,9 @@ block content
         div.w-100.p-3
           input.form-control-lg(type="text", name="E-mail2", placeholder="E-mail")
         div.w-100.p-3
-          input.form-control-lg(type="password", name="Passwort", placeholder="Passwort")
+          input.form-control-lg(type="password", name="Passwort", placeholder="Password")
         div.w-100.p-3
           input.form-control-lg(type="text", name="Name", placeholder="Name")
 
         div.w-100.p-3
-          input.btn-lg.btn-primary.btn(type="submit", value="Anmelden")
+          input.btn-lg.btn-primary.btn(type="submit", value="Registration")

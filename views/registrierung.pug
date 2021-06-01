@@ -3,33 +3,33 @@ extends layout
 block content
     div.p-3
         if !req.query.PLZ                
-            h2 Danke für das Anmelden
+            h2 Thank you for your registration
             form(action="auswahl")
                 div.w-100.p-3
                     input.btn-primary.btn.btn-lg(type="submit", value="Los gehts!")
 
             div.p-3
-                h2 Noch keinen Tracker?
+                h2 Still no tracker?
                 img(src="/images/Tracker1.jpg" width="300px")  
                 form(action="registrierung")
                     div.w-100.p-3
-                        input.form-control-lg(type="text", name="Straße", placeholder="Straße" id="straße")
+                        input.form-control-lg(type="text", name="Straße", placeholder="Street" id="straße")
                     div.w-100.p-3
-                        input.form-control-lg(type="text", name="PLZ", placeholder="PLZ" id="plz")
+                        input.form-control-lg(type="text", name="PLZ", placeholder="Post Code" id="plz")
                     div.w-100.p-3
-                        input.form-control-lg(type="text", name="Stadt", placeholder="Stadt" id="stadt")
+                        input.form-control-lg(type="text", name="Stadt", placeholder="City" id="stadt")
 
                     div.w-100.p-3
-                        input.btn-lg.btn-success.btn(type="submit", value="Bestellen")  
+                        input.btn-lg.btn-success.btn(type="submit", value="Order")  
 
         else
-            h2 Danke für das Anmelden 
-            p Ihr Tracker wird geliefert
+            h2 Thank you for your registration
+            p Your tracker will be shipped
             img(src="/images/paket.gif" width="300px") 
 
             form(action="auswahl")
                 div.w-100.p-3
-                    input.btn-primary.btn.btn-lg(type="submit", value="Los gehts!")
+                    input.btn-primary.btn.btn-lg(type="submit", value="Let's go!")
 
 
 
